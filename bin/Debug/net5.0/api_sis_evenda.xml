@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api_sis_evenda</name>
+    </assembly>
+    <members>
+        <member name="M:api_sis_evenda.estoque.Controllers.ProdutosController.GetProdutos">
+            <summary>
+            Serviço para consultar o cadastro de produtos
+            </summary>
+            <returns>Retorna status 200 OK em caso de sucesso.</returns>
+        </member>
+        <member name="M:api_sis_evenda.estoque.Controllers.ProdutosController.GetProduto(System.Int32)">
+            <summary>
+            Serviço para consultar o cadastro de produtos pelo campo Id da view model
+            </summary>
+            <param name="id">campo id da view model</param>
+            <returns>Retorna status 200 OK em caso de sucesso.</returns>
+            <response code="404">Produto não encontrado!</response>
+        </member>
+        <member name="M:api_sis_evenda.estoque.Controllers.ProdutosController.PutProduto(System.Int32,api_sis_evenda.Estoque.ViewModels.ProdutoVendasViewModel)">
+            <summary>
+            Serviço para atualizar o cadastro de produtos pelo campo Id da view model
+            </summary>
+            <param name="produtoViewModel"> View model do method PUT</param>
+            <param name="id">campo id da view model</param>
+            <returns>Retorna status 200 OK em caso de sucesso.</returns>
+        </member>
+        <member name="M:api_sis_evenda.estoque.Controllers.ProdutosController.PostProduto(api_sis_evenda.Estoque.ViewModels.ProdutoVendasViewModel)">
+            <summary>
+            Serviço para realizar o cadastro de produtos 
+            </summary>
+            <param name="produtoViewModel">View model do method POST</param>
+            <returns>Retorna status 201 created em caso de sucesso.</returns>
+        </member>
+        <member name="M:api_sis_evenda.Estoque.Services.Utils.ToJsonBytes(System.Object)">
+            <summary>
+            Converts the object to json bytes.
+            </summary>
+            <param name="source">The source.</param>
+            <returns></returns>
+        </member>
+        <member name="M:api_sis_evenda.Vendas.Services.Utils.ParseJson``1(System.Byte[])">
+            <summary>
+            Parses a Utf8 byte json to a specific object.
+            </summary>
+            <typeparam name="T">type of object to be parsed.</typeparam>
+            <param name="json">The json bytes.</param>
+            <returns>the object parsed from json.</returns>
+        </member>
+        <member name="M:api_sis_evenda.vendas.Controllers.VendasController.GetProdutos">
+            <summary>
+            Serviço para consultar o cadastro de produtos do módulo de vendas
+            </summary>
+            <returns>Retorna status 200 OK em caso de sucesso.</returns>
+        </member>
+        <member name="M:api_sis_evenda.vendas.Controllers.VendasController.PutProduto(System.Int32,api_sis_evenda.Estoque.ViewModels.ProdutoVendasViewModel)">
+            <summary>
+            Serviço para realizar a venda de produtos do módulo de vendas
+            </summary>
+            <param name="produtoViewModel"> View model do method PUT</param>
+            <param name="id">campo id da view model</param>
+            <returns>Retorna status 200 OK em caso de sucesso.</returns>
+        </member>
+    </members>
+</doc>
